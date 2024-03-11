@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include <vector>
 
-int main(int argc, char*argv)
+using namespace std;
+
+int main(int argc, char *argv[])
 {
-    std::cout << "Hello World!\n";
+    vector<string> parametros(argv, argv + argc);
+    cout << "Has facilitado " << parametros.size()
+        << "parámetros: " << endl;
+    for (auto const& parametro : parametros) {
+        cout << parametro << endl;
+
+    }
+
+    return 0;
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
