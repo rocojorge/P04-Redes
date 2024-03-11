@@ -2,17 +2,28 @@
 //
 
 #include <iostream>
+//#include <cstring>
 #include <vector>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    /*
     vector<string> parametros(argv, argv + argc);
     cout << "Has facilitado " << parametros.size()
         << "parámetros: " << endl;
     for (auto const& parametro : parametros) {
         cout << parametro << endl;
+
+    }
+
+    cout << endl;
+    */
+
+    cout << "Has facilitado " << argc - 1 << " parámetros: " << endl;
+    for (int i = 1; i < argc; ++i) {
+        cout << argv[i] << endl;
 
     }
 
