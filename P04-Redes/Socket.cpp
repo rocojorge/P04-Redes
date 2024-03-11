@@ -10,7 +10,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
 	int misocket;
 
-	if (misocket = socket(AF_INET, SOCK_RAW, IPPROTO_RAW); misocket == -1) {
+	if (misocket = socket(AF_INET, SOCK_RAW, IPPROTO_TCP); misocket == -1) {
 		throw runtime_error(strerror(errno));
 	}
 	cout << "Se ha creado el socket satisfactoriamente" << endl;
